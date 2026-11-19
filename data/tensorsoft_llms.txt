@@ -1,0 +1,51 @@
+# data-api
+
+> Market intelligence API: perpetual-futures funding rates and open interest
+> (30+ venues), lending/borrow rates (Aave, Kamino, Morpho, ...), staking APRs,
+> DEX pools, tokenized real-world assets and tokenized stocks — with dossiers,
+> screens and time-series history up to 30 days.
+
+Auth & access:
+- Free tier: no credentials. 1 req/s per IP, 2500 calls/calendar-month.
+  History capped at 24h. Watch `x-tier` / `x-quota-remaining` headers.
+- API key: `X-API-Key` header (or bearer via `POST /auth/token`). 20 req/s
+  default per key, no monthly cap, history to 30 days.
+- x402 payment (when enabled): per-call USDC/GUSD via `402 Payment Required`
+  challenges; see `GET /.well-known/x402` for machine-readable pricing across
+  Base, Polygon, Solana and Robinhood Chain. A paid call unlocks the full 30-day
+  history: $0.001 base + $0.0005/day beyond day one (+$0.01 for complex
+  endpoints). In practice each lane floors its price a healthy margin over its
+  settlement fee: the Coinbase CDP lanes (Base, Polygon, Arbitrum, Solana)
+  carry a flat fee and floor near $0.003–0.004; BSC via payai can reach ~$0.012
+  for micro-calls; Robinhood Chain honors the $0.0044 GUSD protocol minimum;
+  multi-day range calls clear every floor unchanged — the live quote in the 402
+  challenge is authoritative. A paid call does not consume the free monthly
+  quota.
+
+Spec & docs:
+- OpenAPI 3.1: https://api.tensorsoft.tech/api-docs/openapi.json
+- Swagger UI: https://api.tensorsoft.tech/swagger-ui
+- x402 catalog: https://api.tensorsoft.tech/.well-known/x402
+
+Endpoints (all under `/api/v1`, JSON, ETag/304 supported):
+- perp: funding/latest · funding/history · funding/spread · funding/platforms · carry
+- lend: latest · history
+- staking: products
+- pools: latest · history (needs `chain=`)
+- rwa: assets · assets/{external_id} · {underlying} · {underlying}/deviation ·
+  screen · contracts · lookup · issuer-tokens · polymarket · perps
+- stocks: ohlc/{symbol} · profile/{ticker} · quotes · tokenized/{symbol} · listings
+- dashboard: overview
+- meta: platforms · datasets
+
+Units: APRs are percentages (0.01 = 0.01%); funding_rate_apr annualized;
+utilization 0–1. Over-limits answer 429 (`Retry-After`), quota exhaustion 429
+or 402-with-payment where x402 is enabled.
+
+Support & disclaimer:
+- Support: support@tensorsoft.tech
+- The API is in heavy development; all data is provided "as is", without
+  warranty of any kind. Rates, prices and metrics come from third-party venues
+  and may contain outliers, staleness or errors — check anything anomalous
+  against the source venue before acting on it. Tensorsoft accepts no
+  responsibility or liability for financial losses. Not investment advice.

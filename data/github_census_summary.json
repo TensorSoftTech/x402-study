@@ -1,0 +1,210 @@
+{
+  "asOf": "2026-11-05",
+  "cohort_repos": 1931,
+  "study_claimed_unique": 1922,
+  "builders": 985,
+  "classes": {
+    "facilitator": 186,
+    "sdk/template": 203,
+    "product": 157,
+    "hackathon": 92,
+    "one-shot": 224,
+    "listed-seller": 58,
+    "list": 22,
+    "vanished": 41,
+    "bot-artifact": 2
+  },
+  "born_months_top": [
+    [
+      "2026-10",
+      454
+    ],
+    [
+      "2026-11",
+      240
+    ],
+    [
+      "2026-08",
+      61
+    ],
+    [
+      "2025-11",
+      37
+    ],
+    [
+      "2025-10",
+      32
+    ],
+    [
+      "2026-02",
+      18
+    ],
+    [
+      "2026-07",
+      17
+    ],
+    [
+      "2026-05",
+      16
+    ],
+    [
+      "2026-03",
+      16
+    ],
+    [
+      "2026-06",
+      16
+    ],
+    [
+      "2026-09",
+      16
+    ],
+    [
+      "2025-12",
+      15
+    ]
+  ],
+  "born_oct_nov_2026": 694,
+  "pushed_30d": 750,
+  "active_30plus_90d": 104,
+  "vanished": 41,
+  "facilitators_top": [
+    [
+      "facilitator.payai.networ",
+      108
+    ],
+    [
+      "facilitator.exampl",
+      20
+    ],
+    [
+      "facilitator.example.com",
+      15
+    ],
+    [
+      "facilitator.payai.network",
+      7
+    ],
+    [
+      "facilitator.invali",
+      7
+    ],
+    [
+      "facilitator.pieverse.io",
+      4
+    ],
+    [
+      "facilitator.goplausible.xyz",
+      4
+    ],
+    [
+      "facilitator.test",
+      4
+    ],
+    [
+      "facilitator.ultravioletadao.xyz",
+      4
+    ],
+    [
+      "facilitator.acedata.cloud",
+      3
+    ],
+    [
+      "facilitator.daydreams.system",
+      3
+    ],
+    [
+      "facilitator.x402.nerochain.io",
+      2
+    ]
+  ],
+  "payai_wired": 115,
+  "top50_earners_with_public_github": 10,
+  "earners_with_github": [
+    {
+      "name": "BlockRun.AI",
+      "usd_7d": 269.2,
+      "repos": [
+        "meta-introspector/clawrouter"
+      ]
+    },
+    {
+      "name": "x402.synthexforge.com",
+      "usd_7d": 149.3,
+      "repos": [
+        "hermeschoosenone-debug/synthex-mcp-server"
+      ]
+    },
+    {
+      "name": "Pocket Network",
+      "usd_7d": 140.7,
+      "repos": [
+        "pokt-network/agentic-portal-mcp"
+      ]
+    },
+    {
+      "name": "www.quicknode.com",
+      "usd_7d": 70.0,
+      "repos": [
+        "magpiecapital/awesome-x402-merit",
+        "sibylcap/awesome-x402",
+        "sibylcap/awesome-x402-1"
+      ]
+    },
+    {
+      "name": "agents.writerslogic.com",
+      "usd_7d": 46.2,
+      "repos": [
+        "writerslogic/ai-agents-mcp",
+        "writerslogic/citation-retraction-check",
+        "writerslogic/cra-exploit-clock",
+        "writerslogic/dependency-health-review",
+        "writerslogic/exploit-gatekeeper",
+        "writerslogic/hf-model-license-check"
+      ]
+    },
+    {
+      "name": "agentreferee.ai",
+      "usd_7d": 40.4,
+      "repos": [
+        "ccheez34/agent-referee-mcp",
+        "ccheez34/agent-referee-python",
+        "ccheez34/agent-referee-server"
+      ]
+    },
+    {
+      "name": "x402-api.heyelsa.ai",
+      "usd_7d": 33.0,
+      "repos": [
+        "heyelsa/elsa-openclaw",
+        "heyelsa/elsa-x402-examples",
+        "heyelsa/elsa-x402-skills"
+      ]
+    },
+    {
+      "name": "Nansen",
+      "usd_7d": 27.8,
+      "repos": [
+        "xona-labs/orbit-x402"
+      ]
+    },
+    {
+      "name": "Agents Trust",
+      "usd_7d": 27.7,
+      "repos": [
+        "agents-trust/agents-trust-mcp"
+      ]
+    },
+    {
+      "name": "api.surplusintelligence.ai",
+      "usd_7d": 22.2,
+      "repos": [
+        "ivcained/antseed-surplus"
+      ]
+    }
+  ],
+  "clone_read": 944,
+  "clone_read_note": "non-vanished set; 985 builders - 41 vanished = 944",
+  "spam_elon00_plus_api_evangelist": 357,
+  "spam_share_of_raw_1922": 0.1857
+}

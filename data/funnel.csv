@@ -1,0 +1,8 @@
+stage,resources,products_domains,pct_of_listed
+listed,35244,3265,100
+never_called,535,17,1.5
+called_exactly_once,19140,519,54.3
+>=2 calls,15569,2729,44.2
+>=2 payers,11016,,
+>=10 payers,714,,
+>=100 payers,74,,

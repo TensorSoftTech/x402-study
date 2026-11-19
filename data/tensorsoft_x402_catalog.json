@@ -1,0 +1,606 @@
+{
+  "fetchedAt": "2026-11-19T20:21:00Z",
+  "count": 30,
+  "x402Version": 2,
+  "payment": {
+    "amountAtomic": "1000",
+    "amountUsdString": "0.001",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "maxTimeoutSeconds": 60,
+    "network": "eip155:8453",
+    "networksAccepted": [
+      "base",
+      "eip155:8453",
+      "eip155:137",
+      "eip155:42161",
+      "solana",
+      "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+      "eip155:56",
+      "robinhood"
+    ],
+    "note": "Free and key tiers unchanged. When X402_ENABLED=1, quota-exhausted anonymous callers receive 402 with per-network accepts (this catalog's lanes) and are served at tier 'paid' after facilitator settlement. See deploy/x402-PLAN.md",
+    "payTo": "0x4043c223B8569C0b8b14FDCfcb484C54CD7D6bf8",
+    "scheme": "exact",
+    "status": "ready"
+  },
+  "service": {
+    "description": "Market intelligence over one TimescaleDB: perp funding rates & APR, lending yields, staking, LP pools, tokenized RWAs and equities. Envelope: {data, meta}; ETag + X-Cache headers.",
+    "docs": "https://api.tensorsoft.tech/swagger-ui",
+    "name": "data-api",
+    "openapi": "https://api.tensorsoft.tech/api-docs/openapi.json",
+    "serviceName": "data-api",
+    "tags": [
+      "markets",
+      "crypto",
+      "funding-rates",
+      "rwa",
+      "stocks"
+    ]
+  },
+  "resources": [
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/dashboard/overview",
+      "description": "One-shot market intelligence overview: funding leaders, carry, LP/credit",
+      "amounts_atomic": [
+        "11000",
+        "11824"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/lend/history",
+      "description": "APR history for one lending market (`time_bucket` series).",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/lend/latest",
+      "description": "Latest lending snapshots per (platform, market): supply/borrow APR, utilization, TVL.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/meta/datasets",
+      "description": "Table-level freshness and size of each dataset.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/meta/platforms",
+      "description": "Every venue / catalog dimension the API knows about.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/perp/carry",
+      "description": "Funding-carry screen: perp APR vs borrow cost per symbol.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/perp/funding/history",
+      "description": "Funding history for one market, bucketed.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/perp/funding/latest",
+      "description": "Latest funding snapshot per venue/market (one row per market).",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/perp/funding/platforms",
+      "description": "Per-platform open-interest roll-up.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/perp/funding/spread",
+      "description": "Funding APR for one symbol across all venues, with min/max spread.",
+      "amounts_atomic": [
+        "11000",
+        "11824"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/pools/history",
+      "description": "data-api endpoint",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/pools/latest",
+      "description": "Latest LP pools with APR breakdown (fees + rewards).",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/assets",
+      "description": "Tokenized real-world assets (stocks, ETFs, commodities), latest snapshot each.",
+      "amounts_atomic": [
+        "11000",
+        "11824"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/assets/bitcoin",
+      "description": "One RWA asset joined with its on-chain deployments and Polymarket markets.",
+      "amounts_atomic": [
+        "11000",
+        "11824"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/contracts",
+      "description": "Mint catalog: browse every issuer contract deployment.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/issuer-tokens",
+      "description": "On-chain tokenized-asset deployments across issuers and chains.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/lookup",
+      "description": "Reverse lookup: contract address \u2192 underlying(s) + every deployment.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/perps",
+      "description": "Perp venues funding that trade a given (often tokenized) underlying.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/polymarket",
+      "description": "Prediction markets about real-world assets (Polymarket).",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/screen",
+      "description": "Screen across all tokenized underlyings (contracts, issuers, chains, OI).",
+      "amounts_atomic": [
+        "11000",
+        "11824"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/underlyings/SPY",
+      "description": "Full executable dossier for one tokenized underlying.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/underlyings/SPY/deviation",
+      "description": "Token-price vs equity-price deviation by source (perp marks, Ondo).",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/SPY",
+      "description": "Full executable dossier for one tokenized underlying.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/rwa/SPY/deviation",
+      "description": "Token-price vs equity-price deviation by source (perp marks, Ondo).",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/staking/products",
+      "description": "Liquid-staking products with APR derived from exchange-rate growth (7d/30d).",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/stocks/listings",
+      "description": "Global equity listing catalog (ISIN, venue, sector, country).",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/stocks/ohlc/BTC",
+      "description": "Daily OHLC bars for a symbol (ascending).",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/stocks/profile/AAPL",
+      "description": "SEC EDGAR company profile by ticker.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/stocks/quotes",
+      "description": "Latest equity quotes \u2014 intraday where available, else last daily close.",
+      "amounts_atomic": [
+        "11824",
+        "3340",
+        "4400"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    },
+    {
+      "resource": "https://api.tensorsoft.tech/api/v1/stocks/tokenized/BTC",
+      "description": "Cross-domain: every on-chain trace of a stock \u2014 tokenization issuers,",
+      "amounts_atomic": [
+        "11000",
+        "11824"
+      ],
+      "networks": [
+        "base",
+        "eip155:137",
+        "eip155:42161",
+        "eip155:56",
+        "eip155:8453",
+        "robinhood",
+        "solana",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+      ]
+    }
+  ]
+}

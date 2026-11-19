@@ -1,0 +1,17 @@
+06516894d8ac8f7f   ./charts/birth_curve.png
+66b3f37436a8f3a8   ./charts/concentration.svg
+19637b9671c4ea66   ./charts/funnel.svg
+0902f2b9ffcb5743   ./data/funnel.csv
+a0e0fc7ff9c2c3f3   ./data/github_census_summary.json
+c67507a95cb38295   ./data/leaderboard_join.csv
+6c83aef77d813c35   ./data/niches.csv
+f029ace6cbbf9f29   ./data/niches_fixed.csv
+895da38ff6063ec1   ./data/prices.csv
+a1a7517562235547   ./data/resources.csv
+d17ef76b9a740e01   ./data/tensorsoft_llms.txt
+4981a45e9646e695   ./data/tensorsoft_x402_catalog.json
+96d5f6dcd1fe40c0   ./data/top_products.csv
+b1e5172fe391f1ef   ./data/top_products_fixed.csv
+35c2a8feb849eddf   ./.gitignore
+f22e0a13b49fd74b   ./README.md
+55b4e20f18ebd28b   ./scripts/analyze.py

@@ -1,0 +1,16 @@
+# Local drafts / critic passes (finished piece publishes as README.md)
+study.md
+review/
+
+# Secrets / local junk
+.DS_Store
+.env*
+*.pem
+*.key
+credentials.json
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+.ipynb_checkpoints/
