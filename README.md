@@ -2,9 +2,7 @@
 
 Census pack for Tensorsoft’s x402 Open Book — CDP Bazaar demand fields + GitHub builder gate. Published on the research page; this repo holds the derived tables and charts.
 
-**Site:** [tensorsoft.tech](https://tensorsoft.tech) · **Research:** [tensorsoft.tech/research](https://tensorsoft.tech/research)
-
-<!-- article: paste publish URL here when live -->
+**Study:** [tensorsoft.tech/research/x402-open-book](https://tensorsoft.tech/research/x402-open-book) · **Research index:** [tensorsoft.tech/research](https://tensorsoft.tech/research)
 
 ## Layout
 
